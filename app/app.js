@@ -1,5 +1,11 @@
 import Yolk from 'yolk'
 
 import {Counter} from './counter'
+import {Input} from './input';
 
-Yolk.render(<Counter />, document.getElementById('container'));
+Yolk.render(
+  <div>
+    <Input/>
+    <Counter/>
+  </div>,
+  document.getElementById('container'));
