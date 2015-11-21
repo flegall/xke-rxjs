@@ -18,6 +18,7 @@
   "bugs": {
     "url": "https://github.com/flegall/xke-rxjs/issues"
   },
+  "readme": "https://github.com/flegall/xke-rxjs#readme",
   "homepage": "https://github.com/flegall/xke-rxjs#readme",
   "dependencies": {
     "immutable": "3.7.5",
