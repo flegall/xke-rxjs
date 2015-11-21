@@ -4,7 +4,10 @@
   "description": "RXJS show-case",
   "main": "index.js",
   "scripts": {
-    "start": "browserify src/app.js -o application.js -t [ babelify --presets [ es2015 ] ]"
+    "start": "npm run watch & npm run livereload & npm run static",
+    "watch": "watchify app/app.js -o app/bundle.js -d -t [ babelify --sourceMapRelative . --presets [ es2015 ] ]",
+    "livereload": "livereloadify app",
+    "static": "static app"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
     "yolk": "0.9.0"
   },
   "babel": {
+    "sourceMaps": "inline",
     "plugins": [
       [
         "babel-plugin-transform-react-jsx",
@@ -36,6 +40,9 @@
     "babel-preset-es2015": "6.1.18",
     "babel-preset-react": "6.1.18",
     "babelify": "7.2.0",
-    "browserify": "12.0.1"
+    "browserify": "12.0.1",
+    "livereloadify": "2.0.0",
+    "node-static": "0.7.7",
+    "watchify": "3.6.1"
   }
 }
