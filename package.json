@@ -4,7 +4,7 @@
   "description": "RXJS show-case",
   "main": "index.js",
   "scripts": {
-    "start": "npm run watch & npm run livereload & npm run static",
+    "start": "npm run watch & npm run livereload & npm run static & sleep 1 & open http://localhost:8080",
     "watch": "watchify app/app.js -o app/bundle.js -d -t [ babelify ]",
     "livereload": "livereloadify app",
     "static": "static app"
